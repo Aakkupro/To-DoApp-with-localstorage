@@ -1,0 +1,121 @@
+:root {
+    --text-color: #333;
+    --bg-color: #f4f5f9bc;
+    --btn-color: #3b5998;
+    --btn-hover: #4b70c7;
+    --border-color: #ccc;
+    --progress-bg: #ddd;
+    --progress-fill: #5ef734;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('bluebutterfly.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 50%;
+    background-color: var(--bg-color); 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: var(--text-color);
+}
+
+input[type="text"] {
+    width: 60%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--btn-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--btn-hover);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: auto;
+    /* margin: 20px 0;
+    border: 1px solid var(--border-color); */
+}
+li{
+    word-wrap: break-word;
+    overflow: hidden; 
+}
+
+
+li.task-item {
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.task {
+    flex-grow: 1; /* Allow the task text to grow */
+    margin: 0 10px; /* Add margin around the text */
+    white-space: normal; /* Ensure text wraps to the next line */
+    overflow-wrap: break-word; /* Break long words */
+    word-break: break-word;
+}
+
+.task-checkbox {
+    margin-right: 10px;
+}
+
+li.completed .task {
+    text-decoration: line-through;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: var(--progress-bg);
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.progress-bar {
+    height: 20px;
+    width: 0;
+    background-color: var(--progress-fill);
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+}
+@media (max-width: 500px) {
+    .container {
+        width: 80%;
+    }
+}
